@@ -1,0 +1,60 @@
+---
+name: Marie
+surname: Curie
+position: "Professor"
+address: "School of Physics & Chemistry, École Normale Supérieure"
+phone: +1 22 3333 4444
+www: mariecurie.com
+email: "Marie.Curie@ens.fr"
+twitter: mariecurie
+github: mariecurie
+linkedin: mariecurie
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::moderncv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+# Some stuff about me
+
+ * I love animals and nature
+ * I'm from Costa Rica 
+ * I like organization and tidy things
+
+# Education
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Date, ~ Institution, ~ Where,
+  "Highschool", "2012-2016", "Bilingual Highscholl of Naranjo", "Naranjo, Alajuela, Costa Rica",
+  "Bachelor in Statistics", "2017-2020", "Universidad de Costa Rica", "San José, Costa Rica",
+) %>% 
+  detailed_entries(Degree, Date, Institution, Where)
+```
+
+# Skills
+```{r}
+tribble(
+  ~Skill, ~Level,
+  "R programming", "Advanced",
+  "Python, SQL, HTL, CSS", "Intermediate"
+) %>% 
+  detailed_entries(Skill, Level)
+```
+
+# Experience
+```{r}
+tribble(
+  ~Date, ~Job, ~Company, ~Task,
+  "2018", "Academic assistant", "Phd. J. Antonio Rodríguez", "Investigation",
+  "2019 - Present", "Academic assistant", "Msc. Ricardo Alvarado", "Project: Using games to teach Linear Regression",
+  "2019 - Present", "Academic assistant", "Phd. Marcela Alfaro", "Review quizzes, traductions, shiny apps, course planning",
+  "2019 - Present", "Academic assistant", "Msc. Ericka Méndez", "Review quizzes, shiny apps, course planning and others",
+  "Nov 2019 - Present", "Intern", "ixpantia", "Interactive tutorials with learnr+gradethis and project management dashboard with shiny"
+) %>% 
+  detailed_entries(Date, Job, Company, Task)
+```
