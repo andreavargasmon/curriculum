@@ -1,0 +1,69 @@
+---
+name: Andrea
+surname: Vargas
+position: "Estudiante de Estadística"
+address: "San José, Costa Rica"
+phone: +506 7131 7925
+www: 
+email: "avargas2398@gmail.com"
+twitter: andreavargasmon
+github: andreavargasmontero
+linkedin: andreavargasmontero
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::latexcv:
+    theme: classic
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+# Educación
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Date, ~ Institution, ~ Where,
+  "Secundaria", "2012-2016", "Liceo Bilingüe de Naranjo", "Naranjo, Alajuela, Costa Rica",
+  "Bachillerato en Estadística", "Por completar: 2017-2020", "Universidad de Costa Rica", "San José, Costa Rica",
+) %>% 
+  detailed_entries(Degree, Date, Institution, Where)
+```
+
+# Habilidades
+```{r}
+tribble(
+  ~Skill, ~Level,
+  "R", "Intermedio/Avanzado",
+  "Python, SQL, HTML, CSS", "Intermedio",
+  "Manejo de bases de datos", "Intermedio"
+) %>% 
+  detailed_entries(Skill, Level)
+```
+
+# Experiencia
+```{r}
+tribble(
+  ~Date, ~Job, ~Company, ~Task,
+  "2018", "Asistente académica", "Phd. J. Antonio Rodríguez", "Investigación",
+  "2019 - Presente", "Asistente académica", "Msc. Ricardo Alvarado", "Proyecto: Utilizando juegos para enseñar Regresión Lineal",
+  "2019 - Presente", "Asistente académica", "Phd. Marcela Alfaro", "Revisar asignaciones, shiny apps, planeación de cursos",
+  "2019 - Presente", "Asistente académica", "Msc. Ericka Méndez", "Revisar asignaciones y planeación de cursos",
+  "Nov 2019 - Presente", "Pasante", "ixpantia", "Tutoriales interactivos en R con gradethis y learnr y dashboard de gestión de proyectos en shiny"
+) %>% 
+  detailed_entries(Date, Job, Company, Task)
+```
+
+# Otros proyectos
+
+```{r}
+tribble(
+  ~Date, ~Task, ~Description,
+  "2019 - Presente", "RLadies SJ CR Co-Organizadora", "Planificar y exponer sesiones y acividades varias",
+  "2019 - Presente", "Editora de la Revista Serengeti", "Revisión de artículos, organización and publicación"
+) %>% 
+  detailed_entries(Date, Task, Description)
+```
+
