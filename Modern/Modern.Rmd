@@ -1,14 +1,14 @@
 ---
-name: Marie
-surname: Curie
-position: "Professor"
-address: "School of Physics & Chemistry, École Normale Supérieure"
-phone: +1 22 3333 4444
-www: mariecurie.com
-email: "Marie.Curie@ens.fr"
-twitter: mariecurie
-github: mariecurie
-linkedin: mariecurie
+name: Andrea
+surname: Vargas
+position: "Statistics Student"
+address: "San José, Costa Rica"
+phone: +506 7131 7925
+www: 
+email: "avargas2398@gmail.com"
+twitter: andreavargasmon
+github: andreavargasmontero
+linkedin: andreavargasmontero
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::moderncv
 ---

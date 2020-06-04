@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  23 MAR 2020 12:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  4 JUN 2020 16:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -652,11 +652,6 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 79.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 79.
-
-Overfull \hbox (47.59308pt too wide) in paragraph at lines 99--99
- []|[]\T1/lmr/m/n/10.95 (-20) Intermediate/Advanced[]|
- []
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 107.
 
 LaTeX Font Warning: Font shape `U/fontawesometwo/m/sl' undefined
@@ -696,7 +691,7 @@ LaTeX Font Warning: Font shape `U/fontawesomethree/m/sl' undefined
 
 
 Package Fancyhdr Warning: \footskip is too small (52.0pt): 
-Make it at least 56.59154pt.
+Make it at least 69.63203pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
@@ -716,7 +711,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  22906 strings out of 492616
  384503 string characters out of 6129482
- 469959 words of memory out of 5000000
+ 470124 words of memory out of 5000000
  26615 multiletter control sequences out of 15000+600000
  581827 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -735,10 +730,10 @@ exmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2019/texmf-dist/f
 onts/type1/public/lm/lmro10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1
 /public/lm/lmro17.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm
 /lmsy10.pfb>
-Output written on Modern.pdf (1 page, 195388 bytes).
+Output written on Modern.pdf (1 page, 196457 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
+ 88 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  10 named destinations out of 1000 (max. 500000)
  15393 words of extra memory for PDF output out of 17280 (max. 10000000)
 
