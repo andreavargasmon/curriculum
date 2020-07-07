@@ -58,3 +58,16 @@ tribble(
 ) %>% 
   detailed_entries(Date, Job, Company, Task)
 ```
+
+\newpage
+
+# Other projects
+
+```{r}
+tribble(
+  ~Date, ~Task, ~Description,
+  "2019 - Present", "RLadies SJO CR Co-Organizer", "Plan y teach sessions and other activities",
+  "2019 - Present", "Revista Serengeti Editor Team", "Paper revision, general organization and publication"
+) %>% 
+  detailed_entries(Date, Task, Description)
+```
