@@ -18,12 +18,6 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
 ```
 
-# Some stuff about me
-
- * I love animals and nature
- * I'm from Costa Rica 
- * I like organization and tidy things
-
 # Education
 
 ```{r}
@@ -31,7 +25,7 @@ library(tibble)
 tribble(
   ~ Degree, ~ Date, ~ Institution, ~ Where,
   "Highschool", "2012-2016", "Bilingual Highscholl of Naranjo", "Naranjo, Alajuela, Costa Rica",
-  "Bachelor in Statistics", "2017-2020", "Universidad de Costa Rica", "San José, Costa Rica",
+  "Bachelor in Statistics - Honor Grad", "2017-2020", "Universidad de Costa Rica", "San José, Costa Rica",
 ) %>% 
   detailed_entries(Degree, Date, Institution, Where)
 ```
@@ -41,7 +35,12 @@ tribble(
 tribble(
   ~Skill, ~Level,
   "R programming", "Intermediate/Advanced",
-  "Python, SQL, HTL, CSS", "Intermediate"
+  "Python", "Intermediate",
+  "SQL", "Intermediate",
+  "HTL", "Basic",
+  "CSS", "Basic",
+  "GIS", "Basic",
+  "EViews", "Basic"
 ) %>% 
   detailed_entries(Skill, Level)
 ```
@@ -54,7 +53,23 @@ tribble(
   "2019 - Present", "Academic assistant", "Msc. Ricardo Alvarado", "Project: Using games to teach Linear Regression",
   "2019 - Present", "Academic assistant", "Phd. Marcela Alfaro", "Review quizzes, traductions, shiny apps, course planning",
   "2019 - Present", "Academic assistant", "Msc. Ericka Méndez", "Review quizzes, shiny apps, course planning and others",
-  "Nov 2019 - Present", "Intern", "ixpantia", "Interactive tutorials with learnr+gradethis and project management dashboard with shiny"
+  "Nov 2019 - Present", "Intern", "ixpantia", "Interactive tutorials with learnr+gradethis and project management dashboard with shiny",
+  "Jun 2020 - Dic 2020", "Investigation assistant", "CeNaT", "Text exploratory data analysis, Project: 4.0 industry",
+  "Ene 2021 - Hoy", "Data scientist", "ixpantia", "Teaching, modelling, 
+  database management, data analysis"
 ) %>% 
   detailed_entries(Date, Job, Company, Task)
 ```
+
+# Other projects
+
+```{r}
+tribble(
+  ~Date, ~Task, ~Description,
+  "2019 - Present", "RLadies SJ CR Co-Organizer", "Plan and teach sessions, presentations and partnerships",
+  "2019 - Present", "Revista Serengeti Editing Team", "Reviewing papers, organization and publication",
+  "2021 - Present", "Data Latam Co-Organizer", "Plan webinars and podcasts, social media"
+) %>% 
+  detailed_entries(Date, Task, Description)
+```
+
