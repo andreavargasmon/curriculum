@@ -1,7 +1,7 @@
 ---
 name: Andrea
 surname: Vargas
-position: "Statistics Student"
+position: "Data Scientist"
 address: "San José, Costa Rica"
 phone: +506 7131 7925
 www: 
@@ -16,47 +16,54 @@ output: vitae::moderncv
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
+library(tibble)
 ```
-
-# Some stuff about me
-
- * I love animals and nature
- * I'm from Costa Rica 
- * I like organization and tidy things
 
 # Education
 
 ```{r}
-library(tibble)
 tribble(
-  ~ Degree, ~ Date, ~ Institution, ~ Where,
+  ~degree, ~date, ~institution, ~where,
   "Highschool", "2012-2016", "Bilingual Highscholl of Naranjo", "Naranjo, Alajuela, Costa Rica",
-  "Bachelor in Statistics", "2017-2020", "Universidad de Costa Rica", "San José, Costa Rica",
+  "Honors Bachelor in Statistics", "2017-2020", "Universidad de Costa Rica", "San José, Costa Rica",
 ) %>% 
-  detailed_entries(Degree, Date, Institution, Where)
+  detailed_entries(what = degree, 
+                   when = date, 
+                   with = institution, 
+                   whe = where,
+                   why = NULL)
 ```
 
 # Skills
 ```{r}
 tribble(
-  ~Skill, ~Level,
-  "R programming", "Advanced",
-  "Python, SQL, HTL, CSS", "Intermediate"
+  ~skill, ~level,
+  "R", "Advanced",
+  "Python", "Intermediate",
+  "SQL", "Advanced",
+  "HTML-CSS", "Intermediate",
+  "Domo", "Advanced",
 ) %>% 
-  detailed_entries(Skill, Level)
+  detailed_entries(what = skill, level)
 ```
 
 # Experience
 ```{r}
 tribble(
-  ~Date, ~Job, ~Company, ~Task,
+  ~date, ~job, ~company, ~task,
   "2018", "Academic assistant", "Phd. J. Antonio Rodríguez", "Investigation",
-  "2019 - Present", "Academic assistant", "Msc. Ricardo Alvarado", "Project: Using games to teach Linear Regression",
-  "2019 - Present", "Academic assistant", "Phd. Marcela Alfaro", "Review quizzes, traductions, shiny apps, course planning",
-  "2019 - Present", "Academic assistant", "Msc. Ericka Méndez", "Review quizzes, shiny apps, course planning and others",
-  "Nov 2019 - Present", "Intern", "ixpantia", "Interactive tutorials with learnr+gradethis and project management dashboard with shiny"
+  "2019 - 2020", "Academic assistant", "Msc. Ricardo Alvarado", "Project: Using games to teach Linear Regression",
+  "2019 - 2020", "Academic assistant", "Phd. Marcela Alfaro", "Review quizzes, traductions, shiny apps, course planning",
+  "2019 - 2020", "Academic assistant", "Msc. Ericka Méndez", "Review quizzes, shiny apps, course planning and others",
+  "2020", "Intern", "CENAT", "Research assistant - NLP Project",
+  "2019 - 2020", "Intern", "ixpantia", "Interactive tutorials with learnr+gradethis and project management dashboard with shiny",
+  "2021 - Present", "Data professional", "ixpantia", "Data consultant to organizations
+  from a variety of fields. Tasks range from data transformation, Exploratory Data Analysis, automatic reporting, data wrangling, to data visualization and dashboards, machine learning and statistical modelling, API development, cloud based deployments and dataflows"
 ) %>% 
-  detailed_entries(Date, Job, Company, Task)
+  detailed_entries(when = date, 
+                   what = job, 
+                   with = company, 
+                   why = task)
 ```
 
 \newpage
@@ -65,9 +72,12 @@ tribble(
 
 ```{r}
 tribble(
-  ~Date, ~Task, ~Description,
+  ~date, ~project, ~description,
   "2019 - Present", "RLadies SJO CR Co-Organizer", "Plan y teach sessions and other activities",
-  "2019 - Present", "Revista Serengeti Editor Team", "Paper revision, general organization and publication"
+  "2019 - 2022", "Revista Serengeti Editor Team", "Paper revision, general organization and publication",
+  "2022", "Professor of data visualization best practices course", "At Universidad de Costa Rica"
 ) %>% 
-  detailed_entries(Date, Task, Description)
+  detailed_entries(when = date, 
+                   what = project, 
+                   why = description)
 ```
